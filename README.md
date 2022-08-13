@@ -1,1 +1,2 @@
 sample file
+<!DOCTYPE html>
