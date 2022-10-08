@@ -5,25 +5,80 @@
     <title>タイマー</title>
     <meta name="description" content="タイマーアプリ">
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <style>
+        .nb {
+            width: 75px;
+            height: 75px;
+            border-radius: 100%;
+            font-size: 25px;
+        }
+
+        .nb02 {
+            width: 75px;
+            height: 75px;
+            border-radius: 100%;
+            font-size: 16px;
+        }
+
+        .nb03 {
+            width: 235px;
+        }
+
+
+        .dp {
+            font-size: 92px;
+        }
+
+        .t_display {
+            text-align: center;
+        }
+
+        .s_button {
+            text-align: center;
+        }
+    </style>
 
 <body>
-    <h1><span id="timedisplay">00:00</span></h1>
-    <script src="./timer.js"></script>
-    <form>
-        <input type="button" id="number1" value="1" onclick="btnClick(1);">
-        <input type="button" id="number2" value="2" onclick="btnClick(2);">
-        <input type="button" id="number3" value="3" onclick="btnClick(3);"><br>
-        <input type="button" id="number4" value="4" onclick="btnClick(4);">
-        <input type="button" id="number5" value="5" onclick="btnClick(5);">
-        <input type="button" id="number6" value="6" onclick="btnClick(6);"><br>
-        <input type="button" id="number7" value="7" onclick="btnClick(7);">
-        <input type="button" id="number8" value="8" onclick="btnClick(8);">
-        <input type="button" id="number9" value="9" onclick="btnClick(9);"><br>
-        <input type="button" id="number0" value="0" onclick="btnClick(0);"><br>
-        <input type="button" id="startBtn" value="START">
-        <input type="button" id="stopBtn" value="STOP">
-        <input type="button" id="resetBtn" value="RESET">
-    </form>
+    <table>
+        <tr>
+            <th colspan="3">
+                <div class="t_display">
+                    <h1><span class="dp" id="timedisplay">00:00</span></h1>
+                </div>
+            </th>
+        </tr>
+        <script src="./timer.js"></script>
+        <form>
+            <tr>
+                <td><button class="nb" type="button" id="number1" value="1" onclick="btnClick(1);">1</button></td>
+                <td><button class="nb" type="button" id="number2" value="2" onclick="btnClick(2);">2</button></td>
+                <td><button class="nb" type="button" id="number3" value="3" onclick="btnClick(3);">3</button><br></td>
+            </tr>
+            <tr>
+                <td><button class="nb" type="button" id="number4" value="4" onclick="btnClick(4);">4</button></td>
+                <td><button class="nb" type="button" id="number5" value="5" onclick="btnClick(5);">5</button></td>
+                <td><button class="nb" type="button" id="number6" value="6" onclick="btnClick(6);">6</button><br></td>
+            </tr>
+            <tr>
+                <td><button class="nb" type="button" id="number7" value="7" onclick="btnClick(7);">7</button></td>
+                <td><button class="nb" type="button" id="number8" value="8" onclick="btnClick(8);">8</button></td>
+                <td><button class="nb" type="button" id="number9" value="9" onclick="btnClick(9);">9</button><br></td>
+            </tr>
+            <tr>
+                <td><button class="nb" type="button" id="number0" value="0" onclick="btnClick(0);">0</button></td>
+                <td><button class="nb02" type="button" id="stopBtn" value="STOP">STOP</button></td>
+                <td><button class="nb02" type="button" id="resetBtn" value="RESET">RESET</button><br></td>
+            </tr>
+            <tr>
+                <th colspan="3">
+                    <div class="s_button">
+                        <button class="nb03" type="button" id="startBtn" value="START">START</button>
+                </th>
+                </div>
+            </tr>
+
+        </form>
 </body>
 </head>
 
